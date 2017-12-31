@@ -1,0 +1,50 @@
+Question 1: Anagram Substring
+
+Data structure used: HashMap / Dictionary (since operations like insert and lookup take constant time)
+Time complexity: O(n^2)
+Space complexity: O(1)
+
+There are three for loops. First iterates for length of s minus the length of t times which can be considered as O(n). And the rest two for loops are inside the isAnagram() function which has worst case time complexity of O(n). Thus the overall time complexity is O(n^2).
+Since, the worst case space complexity is O(1) - constant because if we assume that the input is restricted to ascii characters, then there are only 128 characters possible keys to the dictionary.
+
+
+Question 2: Longest Palindrome
+
+Data sturcture: Array, List
+Time Complexity: O(n^2)
+Space Complexity: O(1)
+
+Array are used to store the sub strings and comparing for palindrome match.
+Since, the approach used is a brute force solution, the two nested for loops are generating the time complexity to O(n^2). All other statements are having time complexity less than O(n^2).
+Since, only the largest palindrome is stored, the space complexity is O(1)
+
+
+Question 3: MST
+
+Data sturcture: Set
+Time Complexity: O(nlogn)
+Space Complexity: O(n)
+
+The Kruskal's Algorithm to find the Minimum Spanning Treee is used. The time complexity of Kruskal's algorithm is O(nlogn). Since the edges are at most vertices^2, the complexity is O(log V). And the searching operation takes O(V logV).
+The data structure used is Set, since it is giving constant time for searching and union operations.
+
+
+Question 4: Least Common Ancestor
+
+Data sturcture: Matrix
+Time Complexity: O(n^2)
+Space Complexity: O(n)
+
+Used dynamic programming to fill a matrix with the calculated results. Then used the matrix to find the solution. There is a for loop associated to N nodes which iterates N times each. Thus the worst case time complexity is O(n^2).
+A parallel matrix is used to store the calculated results of the same size of the input matrix. Thus the space complexity is O(n).
+
+
+Question 5: Find element from LinkedList
+
+Data sturcture: Linked List
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+The data structure to be used is given to be Linked List. Adding elements to the list takes O(n) time, but since it is a part of testing, it can be ignored.
+Searching for the mth node from the tail of the Linked list contains two for loops. One for advancing a pointer to mth location from the start which takes O(m), and the second for loop for moving two pointers till the end of the list which can have worst time complexity of O(n). Since, m<=n, the overall worst case time complexity will be O(n+m), that is, O(n).
+Since, the search operation is not using any extra space, the space complexity for this question is O(1).
